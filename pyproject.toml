@@ -25,8 +25,8 @@ classifiers = [
 dependencies = ["requests>=2.31"]
 
 [project.urls]
-Homepage = "https://github.com/augustosalazar/python_roble_package"
-Issues = "https://github.com/augustosalazar/python_roble_package/issues"
+Homepage = "https://github.com/openlabun/python_roble_package"
+Issues = "https://github.com/openlabun/python_roble_package/issues"
 
 [project.optional-dependencies]
 dev = ["pytest>=8", "mypy>=1.11", "ruff>=0.6", "types-requests"]
