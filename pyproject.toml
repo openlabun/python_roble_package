@@ -1,0 +1,49 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "roble"
+version = "0.1.0"
+description = "Cliente Python para la plataforma ROBLE de Uninorte OpenLab: autenticación y CRUD sobre PostgreSQL."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Augusto Salazar", email = "augustosalazar@uninorte.edu.co" }]
+keywords = ["roble", "uninorte", "openlab", "api-client", "crud", "auth"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Typing :: Typed",
+]
+dependencies = ["requests>=2.31"]
+
+[project.urls]
+Homepage = "https://github.com/augustosalazar/python_roble_package"
+Issues = "https://github.com/augustosalazar/python_roble_package/issues"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "mypy>=1.11", "ruff>=0.6", "types-requests"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/roble"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
